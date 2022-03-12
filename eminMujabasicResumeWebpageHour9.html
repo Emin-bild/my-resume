@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a1ee5110cd.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #F6F1EC;
+        }
+
+        .cover {
+            display: relative;
+            text-align: center;
+            color: lightseagreen;
+            align-items: center;
+
+        }
+
+        #my-img {
+            position: absolute;
+            width: 250px;
+            height: auto;
+            border-radius: 5%;
+            left: 42%;
+            top: 18%;
+            box-shadow: 0 0 35px 9px gray;
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        #cover-img {
+            width: 100%;
+            height: auto;
+        }
+
+        #cover-img-text {
+            position: absolute;
+            top: 70%;
+            right: 27%;
+            font-size: 2rem;
+            font-family: 'Dosis', sans-serif;
+            color: #413839;
+            font-style: italic;
+            text-shadow: 1px 1px 4px #413839;
+        }
+
+        #my-img:hover {
+            width: 300px;
+            height: auto;
+            box-shadow: 0 0 45px 9px gray;
+            opacity: 1;
+            transition: linear 1s;
+            left: 40%
+        }
+
+        #cover-img-text:hover {
+            font-size: 2.2rem;
+            text-shadow: 3px 3px 10px #413839;
+            transition: linear 0.2s;
+            right: 25%
+        }
+
+
+
+        @media (max-width:1440px) {
+            #my-img {
+                display: block;
+                position: absolute;
+                width: 120px;
+                height: auto;
+                border-radius: 50%;
+                left: 5%;
+                top: 18%
+            }
+
+            #my-img:hover {
+                display: block;
+                position: absolute;
+                width: 140px;
+                height: auto;
+                border-radius: 50%;
+                left: 5%;
+                top: 20%
+            }
+
+            #cover-img-text {
+                display: block;
+                position: absolute;
+                top: 30%;
+                right: 10%;
+                font-size: 1rem;
+                color: #413839;
+            }
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
+        }
+
+        #about-me,
+        #education,
+        #experience,
+        #digital-skills,
+        .quote,
+        .contact {
+            align-self: center;
+            justify-content: center;
+            margin-left: 5%;
+            margin-right: 7%;
+            margin-top: 80px;
+            width: auto;
+            background-color: #B6B6B4;
+            border-radius: 6px;
+
+        }
+
+        #about-me:hover,
+        #education:hover,
+        #experience:hover,
+        #digital-skills:hover,
+        .quote:hover {
+            background-color: #E5E4E2;
+            transition: ease-in-out 1s;
+            margin-left: 0%;
+            margin-right: 0%;
+
+        }
+
+        #about-me h1,
+        #education h1,
+        #experience h1,
+        #digital-skills h1,
+        .quote h1,
+        .contact h1 {
+            padding-top: 8%;
+            padding-bottom: 10%;
+            margin: auto;
+            text-align: center;
+            font-family: 'Architects Daughter', cursive;
+            color: #494F4E;
+
+
+        }
+
+        #about-me p {
+            text-align: justify;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #504A4B;
+            font-weight: 700;
+            padding: 1% 8% 4% 8%;
+        }
+
+        #about-me p:hover {
+            font-size: 1.3rem;
+            transition: ease-in-out 30ms;
+        }
+
+        #education h2,
+        #experience h2,
+        #digital-skills h2 {
+            padding: 10px;
+            font-size: 1.6rem;
+            color: #566D7E;
+
+        }
+
+        #education div,
+        #experience div,
+        #digital-skills div {
+            margin-left: 10%;
+            padding-bottom: 5%;
+
+        }
+
+        #education span,
+        #experience span {
+            display: block;
+            padding: 1px;
+            font-family: 'Source Sans Pro', sans-serif;
+            height: fit-content;
+
+        }
+
+        #education div h2,
+        #experience h2,
+        #digital-skills h2,
+        .footer-contact h2 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.3rem;
+            text-decoration: underline;
+        }
+
+        #digital-skills p {
+            text-align: justify;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #504A4B;
+            padding-right: 35%;
+            font-weight: 700;
+        }
+
+        .quote p {
+            padding-bottom: 5%;
+            padding-left: 75%;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        #nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #494F4E;
+            color: #E5E4E2;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+
+        }
+
+        .navbar-links ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-links li {
+            list-style: none;
+        }
+
+        .navbar-links li a {
+            display: block;
+            text-decoration: none;
+            color: #E5E4E2;
+            padding: 1rem;
+        }
+
+        #logo {
+            font-size: 1.3rem;
+            margin: 0.7rem
+        }
+
+        .navbar-links li:hover {
+            background-color: #566D7E;
+        }
+
+        .toggle {
+            position: absolute;
+            top: .75rem;
+            right: 1rem;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+        }
+
+        .toggle .line {
+            height: 3px;
+            width: 100%;
+            background-color: #F6F1EC;
+            border-radius: 6px;
+
+        }
+
+        @media (max-width:360px) {
+            #cover-img {
+                width: auto;
+                height: 100%;
+            }
+
+            #cover-img-text {
+                position: absolute;
+                top: 90%;
+                left: 60%;
+                font-size: 1rem;
+                width: 100%;
+                color: #413839;
+            }
+
+            #my-img {
+                position: absolute;
+                width: 100px;
+                height: auto;
+                top: 35%;
+            }
+        }
+
+        @media(max-width:580px) {
+            #cover-img-text {
+                top: 60%;
+            }
+        }
+
+        @media(max-width:440px) {
+            #education h2 {
+                padding-left: 5px;
+                font-size: 1rem;
+                color: #566D7E;
+            }
+
+            #cover-img-text {
+                top: 32%;
+                font-size: 0.7rem;
+            }
+
+            #my-img {
+                top: 12%
+            }
+
+            .toggle {
+                display: flex;
+            }
+
+            .navbar-links {
+                display: none;
+            }
+
+            #nav-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar-links ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .navbar-links li {
+                text-align: center;
+            }
+
+            .navbar-links li a {
+                padding: .5rem 1rem;
+            }
+
+            .navbar-links.active {
+                display: flex;
+            }
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        .footer-contact h2 {
+            padding-left:  2rem;
+            color: #566D7E;
+            text-decoration: none;
+
+            
+        }
+        .footer-contact h2 i{
+            padding-left: 10px;
+        }
+
+        .footer-contact h2 a {
+            text-decoration: none;
+            color: #566D7E;
+        }
+       
+       
+       
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <!--The ninth hour.I managed to make the nav-bar responsive, I had to add JavaScript at the end to be able to open the menu with a click. 
+I also added a segment with contacts. I included fontawsome on the page to insert github and linkedin facebook icons. 
+The links lead to my profile pages. -->
+    <header>
+        <nav id="nav-bar">
+            <div id="logo">Logo</div>
+            <a href="#" class="toggle">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#about-me">About me</a></li>
+                    <li><a href="#education">My Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#digital-skills">Digital Skills</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="cover">
+            <img id="cover-img"
+                src="https://media.istockphoto.com/vectors/gray-vector-background-with-stripes-can-be-used-for-cover-design-vector-id1077075812?k=20&m=1077075812&s=612x612&w=0&h=DzuFhp73D6G-W_ZdfqnHORiDxxQ5xPq6FW7atXsqrJc="
+                alt="header cover">
+            <img id="my-img"
+                src="https://media-exp1.licdn.com/dms/image/C4D03AQHGaZiy5c479Q/profile-displayphoto-shrink_800_800/0/1600772854207?e=1651104000&v=beta&t=avEG7VDDM8Zo1jqo0iNVA1VOMJu8riQV88MDLzKQPeU"
+                alt="">
+            <h1 id="cover-img-text">Hi, my name is Emin Mujabasic and I am a web developer.</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="about-me">
+                <h1>About me</h1>
+                <p>I am a down to earth person who is brought up to respect and value my job. I`m
+                    always curious about how things work.
+                    I often know how to spend hours researching how some technologies work and I don`t give up
+                    until I discover and understand that technology. I always go for new knowledge. I am a person who is
+                    easy to
+                    work with, my colleagues always see a person with whom they can talk about everything. I am a worker
+                    who is
+                    loyal and I strive to give back to the company that gave me the opportunity in the best possible
+                    way. I have
+                    been learning web development for three years. Of the technologies I have learned are HTML, CSS,
+                    JavaScript,
+                    ReactJS, I am currently learning MongoDB and Express in a desire to complete the MERN stack. In
+                    addition to web
+                    development, I also used tools such as GIT, Docker, AWS, BASH, MySQL, PostgreSQL, Postman. I am a
+                    big fan of Linux distributions such as Ubuntu, Fedora, Kali Linux, ParrotOS, CentOS. I have mostly
+                    built my
+                    knowledge on web platforms such as freeCodeCamp, udemy, w3school, youtube, etc. On github you can
+                    see some of my
+                    projects that I have done, and I can provide you with projects that I have not posted on github.</p>
+            </div>
+            <div id='education'>
+                <h1>Education</h1>
+                <div>
+                    <h2>Bsc. Bussines Information Technology</h2>
+                    <span><em>from(2017) to(2020)</em></span><br>
+                    <span>Faculty of Management and Business Economics</span><br>
+                    <span>Address: Tuzla (Bosnia and Herzegovina)</span><br>
+                </div>
+                <div>
+                    <h2>Tourism and Catering technician</h2>
+                    <span><em>from(2005) to(2009)</em></span><br>
+                    <span>Tourism and Catering School</span><br>
+                    <span>Address: Tuzla (Bosnia and Herzegovina)</span><br>
+                </div>
+            </div>
+            <div id='experience'>
+                <h1>Work experience</h1>
+                <div>
+                    <h2>Production supervisor</h2>
+                    <span>Elsta Mosdorfer Bosnia</span><br>
+                    <span><em>from(2014) to(Current time)</em></span><br>
+                </div>
+                <div>
+                    <h2>Tehnical Security</h2>
+                    <span>Bh Security</span><br>
+                    <span><em>from(2012) to(2014)</em></span><br>
+                </div>
+                <div>
+                    <h2>Logistic</h2>
+                    <span>Fluor</span><br>
+                    <span><em>from(2010) to(2011)</em></span><br>
+                </div>
+
+            </div>
+            <div id='digital-skills'>
+                <h1>IT Skills</h1>
+                <div>
+                    <h2>Coding</h2>
+                    <p>I am currently in the phase of intensive learning of programming, more precisely web development.
+                        For several years now, I have been trying to learn on my own, but I did not have a
+                        well-developed learning plan. I am currently in the BILD-IT program and hope to get into
+                        in-person training.
+                        I learned HTML, CSS, JavaScript, ReactJS on my own and I can say that I know the basics.</p>
+                </div>
+                <div>
+                    <h2>Networks</h2>
+                    <p>While I worked for a security company, my job was networking alarms, video surveillance,
+                        surveillance units, computers. I installed the networks from scratch and configured them.
+                        I did system installation (linux distribution and windows), server administration, installation
+                        of various software.</p>
+                </div>
+                <div>
+                    <h2>Technologies I know</h2>
+                    <p>I am familiar with the use of Git, Docker, Kubernetes, BASH, PowerShell, AWS Cloud, npm, apt-get,
+                        yarn, Postman, Wireshark, Metasploit. For all these technologies I am at the beginning level.
+                        Some I know more and some less.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="quote">
+            <h1><em> "The most complete gift of God is a life based on knowledge." </em></h1>
+            <p><em> Ali ibn Abu-Talib </em></p>
+        </div>
+        <div class="contact">
+            <h1>Contact me</h1>
+            <div class="footer-contact">
+
+                <h2><a href="https://www.facebook.com/emin.mujabasic">Facebook</a><i class="fab fa-facebook"></i></h2>
+                <h2><a href="https://www.linkedin.com/in/emin-mujabasic-968428127/">LinkedIn</a><i class="fab fa-linkedin"></i></h2>
+                <h2><a href="https://github.com/Emin-bit">GitHub</a><i class="fab fa-github"></i></h2>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        const toggleBtn = document.getElementsByClassName('toggle')[0];
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+        toggleBtn.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        })
+    </script>
+</body>
+
+</html>
